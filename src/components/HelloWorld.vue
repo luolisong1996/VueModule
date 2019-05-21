@@ -21,8 +21,10 @@ export default {
   },
   methods:{
     textone () {
-      var nodes = [ { name: "北京", router:'HelloWorld'}, { name: "厦门" },
-                    { name: "西安"}, { name: "杭州" },
+      var nodes = [ { name: "button", router:'button'},
+                    { name: "echarts", router:'echarts'},
+                    { name: "dropdown", router:'dropdown'},
+                    { name: "杭州" },
                     { name: "上海"}, { name: "青岛" },
                     { name: "满井"} ];
                     

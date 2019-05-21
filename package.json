@@ -1,5 +1,5 @@
 {
-  "name": "vuemodule",
+  "name": "lls",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "lls <luolisong1996@163.com>",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "d3": "^5.9.2",
+    "echarts": "^4.2.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.tmp-drag-warp{
+  background-color: #ABD5F1;
+  width: 400px;
+  margin-left: 20px;
+  overflow: hidden;
+}
+.tmp-drag-search{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.tmp-drag-input{
+  height: 30px;
+  margin: 0 4%;
+  width: 92%;
+}
+.tmp-drag-ul{
+  background-color: #fff;
+  width: 92%;
+  margin: 0 4%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.tmp-drag-li{
+  list-style-type:none;
+  display: inline-block;
+  width: 100%;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+  text-indent: 25px;
+}
+#dropdown .tmp-drag-ul li:hover{
+  background-color: #FF7F50;
+}
+.tmp-drag-li:last-child{
+
+}
