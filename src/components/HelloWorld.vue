@@ -16,8 +16,16 @@ export default {
   mounted(){
     // this.text()
     this.textone()
+    let str = 'asdfasdfhauisdfha'
+    let data = [2,3,38,5,12,13,45,6,67,22]
+    // console.log(this.findMaxDuplicateChar(str))
+    // let a= this.quickSort(data)
+    console.log(a)
   },
   watch:{
+  },
+  updated(){
+
   },
   methods:{
     textone () {
@@ -117,6 +125,63 @@ export default {
             svg_texts.attr("x", function(d){ return d.x; })
                 .attr("y", function(d){ return d.y; });
           }
+    },
+    findMaxDuplicateChar(str){
+      if(str.length == 1){
+        return str
+      }
+      let obj = {}
+      for(let i = 0;i<str.length;i++){
+        if( !obj[str.charAt(i)]){
+          obj[str.charAt(i)] = 1
+        }else{
+          obj[str.charAt(i)] += 1
+        }
+      }
+      let maxValue = 0
+      let maxChar = ''
+      for(let k in obj){
+        if(obj[k] >= maxValue){
+          maxValue = obj[k]
+          maxChar = k
+        }
+      }
+      return maxChar
+    },
+    bubbleSort(arr){
+      for(let i=0;i<arr.length;i++){
+        for(let j = i+1;j<arr.length;i++){
+          if(arr[i]>arr[j]){
+            let tmp = arr[i]
+            arr[i] = arr[j]
+            arr[j] = tmp
+          }
+        }
+      }
+      return arr
+    },
+    quickSort(arr){
+      //如果数组<=1,则直接返回
+      if(arr.length<=1){return arr;}
+      var pivotIndex=Math.floor(arr.length/2);
+      //找基准，并把基准从原数组删除
+      var pivot=arr.splice(pivotIndex,1)[0];
+      console.log(pivot)
+      //定义左右数组
+      var left=[];
+      var right=[];
+
+      //比基准小的放在left，比基准大的放在right
+      for(var i=0;i<arr.length;i++){
+          if(arr[i]<=pivot){
+              left.push(arr[i]);
+          }
+          else{
+              right.push(arr[i]);
+          }
+      }
+      //递归
+      return quickSort(left).concat([pivot],quickSort(right));
     }
   }
 }
